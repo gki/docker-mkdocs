@@ -22,5 +22,3 @@ RUN pip install \
 
 # expors for mkdocs serve
 EXPOSE 8000
-
-# mkdocs serve -a 0.0.0.0:8000
