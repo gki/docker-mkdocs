@@ -22,3 +22,5 @@ RUN pip install \
 
 # expors for mkdocs serve
 EXPOSE 8000
+
+COPY mkdocs-sample-serve.sh /root/
