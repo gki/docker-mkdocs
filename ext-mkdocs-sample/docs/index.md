@@ -11,6 +11,8 @@
 - [pymdownx.mark](./sample/mark.md)
 - [pymdownx.tasklist](./sample/tasklist.md)
 - [pymdownx.tilde](./sample/tilde.md)
+- pymdownx.superfences
+
 
 ```
 TBD
