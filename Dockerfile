@@ -28,7 +28,8 @@ RUN pip install \
   mkdocs \
   mkdocs-material \
   plantuml-markdown \
-  pymdown-extensions
+  pymdown-extensions \
+  pygments
 
 # expors for mkdocs serve
 EXPOSE 8000
