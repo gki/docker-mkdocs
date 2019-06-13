@@ -1,6 +1,12 @@
 # Default Setting
 
-## Samples
+## Basic Samples
+- Text
+- image
+- table
+-
+
+## Default Plugin Samples
 - [admonition](./sample/admonition.md)
 - [codehilite](./sample/codehilite.md)
 - [toc](./sample.toc.md)
