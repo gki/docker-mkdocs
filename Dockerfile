@@ -5,14 +5,24 @@ MAINTAINER gentkd
 ENV PLANTUML_VERSION 1.2019.6
 ENV LANG en_US.UTF-8
 
+RUN mkdir /opt/plantuml \
+    && mkdir /root/workspace
+
+COPY mkdocs-sample-serve.sh /root/
+COPY mkdocs-serve.sh /root/
+COPY plantuml.sh /opt/plantuml/
+
 RUN apk update && apk add --no-cache \
   graphviz \
-  curl \
   openjdk8
 
-RUN mkdir /app \
-    && curl -L https://sourceforge.net/projects/plantuml/files/plantuml.${PLANTUML_VERSION}.jar/download -o /app/plantuml.jar \
+RUN apk add --no-cache curl \
+    &&curl -L https://sourceforge.net/projects/plantuml/files/plantuml.${PLANTUML_VERSION}.jar/download -o /opt/plantuml/plantuml.jar \
     && apk del curl
+
+RUN link /root/mkdocs-serve.sh /bin/mkdocs-serve \
+    && link /root/mkdocs-sample-serve.sh /bin/mkdocs-sample-serve \
+    && link /opt/plantuml/plantuml.sh /bin/plantuml
 
 RUN pip install \
   mkdocs \
@@ -23,4 +33,4 @@ RUN pip install \
 # expors for mkdocs serve
 EXPOSE 8000
 
-COPY mkdocs-sample-serve.sh /root/
+WORKDIR /root
