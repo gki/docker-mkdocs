@@ -1,5 +1,3 @@
-
-## Plantuml
 Plantuml is a UML generator from text.
 They provides vaious type of UML. To check full documentation, see [the official Plantuml site](http://plantuml.com/).
 
@@ -23,7 +21,7 @@ Here are some basic UML Diagram examples.
   Goofy <-- MickeyMouse: responds
 ```
 
-## State Diagram
+### State Diagram
     ```plantuml format="png" width="20%"
     @startuml
     [*] --> State1
@@ -46,7 +44,7 @@ State2 --> [*]
 @enduml
 ```
 
-## Object Diagram (Class Diagram)
+### Object Diagram (Class Diagram)
     ```plantuml
     @startuml
     object Car
