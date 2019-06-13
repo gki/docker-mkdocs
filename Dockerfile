@@ -28,7 +28,7 @@ RUN pip install \
   mkdocs \
   mkdocs-material \
   plantuml-markdown \
-  python-markdown-math
+  pymdown-extensions
 
 # expors for mkdocs serve
 EXPOSE 8000
