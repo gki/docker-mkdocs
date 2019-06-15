@@ -13,7 +13,15 @@ COPY plantuml.sh /opt/plantuml/
 
 RUN apk update && apk add --no-cache \
   graphviz \
-  openjdk8
+  openjdk8 \
+  gcc \
+  musl-dev \
+  jpeg-dev \
+  zlib-dev \
+  libffi-dev \
+  cairo-dev \
+  pango-dev \
+  gdk-pixbuf-dev
 
 RUN apk add --no-cache curl \
     && curl -L https://sourceforge.net/projects/plantuml/files/plantuml.${PLANTUML_VERSION}.jar/download -o /opt/plantuml/plantuml.jar \
@@ -25,7 +33,8 @@ RUN pip install \
   mkdocs-material \
   plantuml-markdown \
   pymdown-extensions \
-  pygments
+  pygments \
+  mkdocs-pdf-export-plugin
 
 # expors for mkdocs serve
 EXPOSE 8000
