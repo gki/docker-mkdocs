@@ -30,7 +30,7 @@ $
 
 Now, you can see the sample mkdocs HTML by accessing `http://0.0.0.0:8000`.
 
-# How to use for your markdown docs.
+## How to use for your markdown docs.
 ```shell
 $ mkdir -p myworkdir/docs
 $ cd myworkdir
@@ -49,4 +49,39 @@ $ echo "Hello MkDocs!" > docs/index.md
 Check mkdocs serve log if you stuck something.
 ```
 $ docker logs ext-mkdocs -f
+```
+
+## How to get build result
+
+### If a `extended-mkdocs` image named `ext-mkdocs` already exists and it mounted with a local dir.
+```shell
+$ (move to local dir)
+
+$ docker exec -w /root/workspace ext-mkdocs mkdocs build
+
+INFO    -  Cleaning site directory
+INFO    -  Building documentation to directory: /root/workspace/site
+
+$ ls site
+
+404.html       assets         index.html     search         sitemap.xml    sitemap.xml.gz
+```
+
+### If there is no running `extended-mkdocs` image.
+
+```shell
+$ (move to local dir)
+
+$ docker run -w /root/workspace \
+-v $(pwd):/root/workspace \
+gentkd/extended-mkdocs \
+mkdocs build
+
+INFO    -  Cleaning site directory
+INFO    -  Building documentation to directory: /root/workspace/site
+
+$ ls site
+
+404.html       assets         index.html     search         sitemap.xml    sitemap.xml.gz
+
 ```
