@@ -5,5 +5,8 @@ before_install:
     - docker build -t dockertest .
 
 script:
+    # installed lib check
     - docker run dockertest mkdocs --version
     - docker run gentkd/extended-mkdocs weasyprint --version
+    # build mkdocs
+    # build with mkdocs
