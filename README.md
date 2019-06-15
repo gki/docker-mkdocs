@@ -1,6 +1,6 @@
 # Extended MkDocs Docker Image
 
-https://travis-ci.com/gki/docker-mkdocs.svg?branch=master
+[![Build Status](https://travis-ci.com/gki/docker-mkdocs.svg?branch=master)](https://travis-ci.com/gki/docker-mkdocs)
 
 DockerHub: https://hub.docker.com/r/gentkd/extended-mkdocs
 
