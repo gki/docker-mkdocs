@@ -8,9 +8,7 @@ ENV LANG en_US.UTF-8
 RUN mkdir /opt/plantuml \
     && mkdir /root/workspace
 
-COPY ext-mkdocs-sample /root/mkdocs-sample
-COPY mkdocs-sample-serve.sh /root/
-COPY mkdocs-serve.sh /root/
+COPY ext-mkdocs-sample /root/sample
 COPY plantuml.sh /opt/plantuml/
 
 RUN apk update && apk add --no-cache \
@@ -18,11 +16,8 @@ RUN apk update && apk add --no-cache \
   openjdk8
 
 RUN apk add --no-cache curl \
-    &&curl -L https://sourceforge.net/projects/plantuml/files/plantuml.${PLANTUML_VERSION}.jar/download -o /opt/plantuml/plantuml.jar \
-    && apk del curl
-
-RUN link /root/mkdocs-serve.sh /bin/mkdocs-serve \
-    && link /root/mkdocs-sample-serve.sh /bin/mkdocs-sample-serve \
+    && curl -L https://sourceforge.net/projects/plantuml/files/plantuml.${PLANTUML_VERSION}.jar/download -o /opt/plantuml/plantuml.jar \
+    && apk del curl \
     && link /opt/plantuml/plantuml.sh /bin/plantuml
 
 RUN pip install \
@@ -34,5 +29,3 @@ RUN pip install \
 
 # expors for mkdocs serve
 EXPOSE 8000
-
-WORKDIR /root
