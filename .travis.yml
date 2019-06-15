@@ -1,0 +1,14 @@
+services:
+    - docker
+
+before_install:
+    - docker build -t dockertest .
+
+script:
+    # installed lib check
+    - docker run dockertest mkdocs --version
+    - docker run dockertest weasyprint --version
+    # build without pdf
+    - docker run dockertest /bin/sh -c "mkdocs new test && cd ./test && cp -p /root/sample/mkdocs.yml ./ && mkdocs build && ls -la site/index.html"
+    # build with pdf
+    - docker run -e ENABLE_PDF_EXPORT=1 dockertest /bin/sh -c "mkdocs new test && cd ./test && cp -p /root/sample/mkdocs.yml ./ && mkdocs build && ls -la pdf/combined.pdf"
