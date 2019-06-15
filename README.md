@@ -51,7 +51,7 @@ Check mkdocs serve log if you stuck something.
 $ docker logs ext-mkdocs -f
 ```
 
-## How to get build result
+## Build HTML
 
 ### If a `extended-mkdocs` image named `ext-mkdocs` already exists and it mounted with a local dir.
 ```shell
@@ -85,3 +85,7 @@ $ ls site
 404.html       assets         index.html     search         sitemap.xml    sitemap.xml.gz
 
 ```
+
+## Build HTML and PDF
+add `-e ENABLE_PDF_EXPORT=1` option to `docker exec` or `docker run` above.  
+Default export pass is `{your local dir}/pdf/combined.pdf`
