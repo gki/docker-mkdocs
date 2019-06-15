@@ -3,7 +3,7 @@ They provides vaious type of UML. To check full documentation, see [the official
 
 
 ## plantuml-markdown
-[plantuml-markdown](https://github.com/mikitex70/plantuml-markdown) is a Python-Markdown plugin. This plugin supports 2 types of syntax, but in here we recoomend to use markdown style syntax for more natural markdown.
+[plantuml-markdown](https://github.com/mikitex70/plantuml-markdown) is a Python-Markdown plugin. This plugin supports 2 types of syntax, but in here, we recommend to use markdown style syntax for more natural markdown.
 
 This plugin also provides an useful feature to set arguments for `image` tag like class, width, height etc. See samples below.
 

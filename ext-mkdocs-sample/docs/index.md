@@ -4,12 +4,11 @@
 - Text
 - image
 - table
--
 
 ## Default Plugin Samples
 - [admonition](./sample/admonition.md)
 - [codehilite](./sample/codehilite.md)
-- [toc](./sample.toc.md)
+- [toc](./sample/toc.md)
 - [plantuml_markdown](./sample/plantuml.md)
 - [footnotes](./sample/footnotes.md)
 - [pymdownx.arithmatex](./sample/arithmatex.md)

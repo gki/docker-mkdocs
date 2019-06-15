@@ -1,4 +1,4 @@
-Arithmatex is one of the PyMdown Extensions for LaTeX in markdwon with mathjax lib.
+Arithmatex is one of the PyMdown Extensions for LaTeX in markdwon with MathJax lib.
 
 ## Inline Syntax
     Our original formula: $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$ is awesome!!
