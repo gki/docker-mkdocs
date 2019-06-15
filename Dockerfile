@@ -8,6 +8,7 @@ ENV LANG en_US.UTF-8
 RUN mkdir /opt/plantuml \
     && mkdir /root/workspace
 
+COPY ext-mkdocs-sample /root/mkdocs-sample
 COPY mkdocs-sample-serve.sh /root/
 COPY mkdocs-serve.sh /root/
 COPY plantuml.sh /opt/plantuml/

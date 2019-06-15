@@ -8,17 +8,14 @@ TBD
 Install docker for your machine, then follow the steps below.
 
 ```shell
-$ $ docker run -d -p 8000:8000 --name sample gentkd/extended-mkdocs:local mkdocs-sample-serve
+$ docker run -d -p 8000:8000 --name sample gentkd/extended-mkdocs:local mkdocs-sample-serve
 6de822124d991439c9dd6a08f6b25bded0cb7025ee206f03dcbfe30097742eb3
 
 $ docker ps
 CONTAINER ID        IMAGE                          COMMAND                 CREATED             STATUS              PORTS                    NAMES
 6de822124d99        gentkd/extended-mkdocs:local   "mkdocs-sample-serve"   4 seconds ago       Up 3 seconds        0.0.0.0:8000->8000/tcp   sample
 
-$ docker logs sample
-INFO    -  Creating project directory: mkdocs-sample
-INFO    -  Writing config file: mkdocs-sample/mkdocs.yml
-INFO    -  Writing initial docs: mkdocs-sample/docs/index.md
+$ docker logs sample -f
 INFO    -  Building documentation...
 INFO    -  Cleaning site directory
 [I 190613 11:16:16 server:296] Serving on http://0.0.0.0:8000
