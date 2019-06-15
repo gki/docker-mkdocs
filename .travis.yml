@@ -1,0 +1,9 @@
+services:
+    - docker
+
+before_install:
+    - docker build -t dockertest .
+
+script:
+    - docker run dockertest mkdocs --version
+    - docker run gentkd/extended-mkdocs weasyprint --version
