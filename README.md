@@ -1,5 +1,9 @@
 # Extended MkDocs Docker Image
 
+https://travis-ci.com/gki/docker-mkdocs.svg?branch=master
+
+DockerHub: https://hub.docker.com/r/gentkd/extended-mkdocs
+
 ## How to try the sample `mkdocs serve`
 Install docker for your machine, then follow the steps below.
 
