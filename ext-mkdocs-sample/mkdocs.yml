@@ -34,3 +34,4 @@ plugins:
     - pdf-export:
         combined: true
         combined_output_path: ../pdf/combined.pdf
+        enabled_if_env: ENABLE_PDF_EXPORT
