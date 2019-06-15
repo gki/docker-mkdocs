@@ -1,4 +1,4 @@
-site_name: Extended MkDocs Docker Sample
+site_name: Extended MkDocs Docker
 theme:
   name: 'material'
   palette:
@@ -11,6 +11,7 @@ theme:
 
 markdown_extensions:
   - admonition
+  - sane_lists
   - codehilite:
       guess_lang: true
   - toc:

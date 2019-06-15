@@ -1,9 +1,8 @@
 
 ToC is a plugin for generate Table of Contents from headers of a markdown file.
 
-## Samples
-You can see ToC at the right side of this page!!
-
+    # Header 1
+    Header 1 will be ignore from ToC.
     ## Header 2
     ### Header 3
     #### Header 4
@@ -19,6 +18,8 @@ You can see ToC at the right side of this page!!
     ##### Header 5
 
 
+# Header 1
+Header 1 will be ignore from ToC.
 ## Header 2
 ### Header 3
 #### Header 4
